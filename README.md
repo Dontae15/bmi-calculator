@@ -1,2 +1,2 @@
-# bmi-calculator
-FrontEnd Mentor BMI Project
+1. Create mixins and variables
+2. Html

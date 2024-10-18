@@ -1,0 +1,16 @@
+@use 'abstracts/helpers' as *;
+
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/layout';
+
+
+@use 'components/hero';
+@use 'components/bmi-limitations';
+@use 'components/tips';
+@use 'components/your-results';
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,31 @@
+@use '../abstracts/helpers' as *;
+
+.text-preset-1 {
+    @include text($font-size: $heading-xl, $font-weight: $fw-semi-bold, $line-height: $lh-lg, $letter-spacing: $ls-xl);
+}
+
+.text-preset-2 {
+    @include text($font-size: $heading-lg, $font-weight: $fw-semi-bold, $line-height: $lh-lg, $letter-spacing: $ls-lg);
+}
+
+.text-preset-3 {
+    @include text($font-size: $heading-md, $font-weight: $fw-semi-bold, $line-height: $lh-lg, $letter-spacing: $ls-md);
+}
+
+.text-preset-4 {
+    @include text($font-size: $heading-sm, $font-weight: $fw-semi-bold, $line-height: $lh-lg, $letter-spacing: $ls-sm);
+}
+
+
+.text-preset-5 {
+    @include text($color: $dark-electric-blue, $font-size: $body-lg, $font-weight: $fw-regular, $line-height: $lh-xl);
+}
+
+.text-preset-5-bold {
+    @include text($font-size: $body-lg, $font-weight: $fw-semi-bold, $line-height: $lh-xl);
+}
+
+.text-preset-6 {
+    @include text($font-size: $body-md, $font-weight: $fw-regular, $line-height: $lh-xl);
+}
+

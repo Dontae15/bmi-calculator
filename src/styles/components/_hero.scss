@@ -1,0 +1,243 @@
+@use '../abstracts/helpers' as *;
+
+
+
+.hero-content {
+    @include container($max-width: 978px, $padding: 2rem 0 0 4rem, $border-radius: 0px 0px 35px 35px);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: flex-start);
+    background: var(--Gradient-1, linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+    grid-column: 1 / span 9;
+    grid-row: 1 / 2;
+}
+
+
+.hero-content img {
+    margin-bottom: 8rem;
+}
+
+.hero-text {
+    @include container($max-width: 465px);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 2.2rem);
+}
+
+.hero-heading {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+form {
+    @include container($max-width: 564px, $padding: 2.5rem 2rem, $border-radius: 20px, $margin: auto 0);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 2rem);
+    background-color: $white;
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    grid-column: 8 / span 5;
+    grid-row: 1 / 2;
+}
+
+.radio-btns {
+    @include container($max-width: 350px, $padding: 0.5rem);
+    @include flex($flex-direction: row, $align-items: flex-start, $justify-content: space-between);
+}
+
+input[type="radio"] {
+    transform: scale(2);
+    margin-right: 15px;
+}
+
+input[type="radio"]:checked {
+    border: 2px solid hsla(227, 92%, 58%, 0.15);
+}
+
+.input-field {
+    @include container($max-width: 500px);
+    @include flex($flex-direction: row, $align-items: flex-start, $justify-content: flex-start, $gap: 1.5rem);
+}
+
+input[type='number'] {
+    @include container($max-width: 220px, $padding: 20px 24px, $border-radius: 15px);
+    border: 1px solid #D8E2E7;
+}
+
+
+.bmi-result {
+    @include container($max-width: 500px, $padding: 2.5rem 1rem, $border-radius:  16px 999px 999px 16px, $margin: auto 0);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 1rem);
+    background-color: $blue;
+}
+
+.input-group {
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center);
+    position: relative;
+}
+
+.input-group span {
+  position: absolute;
+  top: 53%;
+  left: 75%;
+  color: $blue;
+}
+
+.input-field-imperial {
+    @include container($max-width: 500px, $margin: 0 auto);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 1.5rem);
+}
+
+.input-group-height, .input-group-weight {
+  @include container($max-width: 500px, $margin: 0 auto);
+  @include flex($flex-direction: row, $align-items: flex-start, $justify-content: space-between, $gap:             1.5rem);
+  margin-top: -1rem;
+}
+
+.input-group-height {
+  margin-bottom: -0.5rem;
+}
+
+.input-container {
+  @include container($max-width: 300px);
+  @include flex($flex-direction: row, $align-items: center, $justify-content: flex-start);
+  position: relative;
+}
+
+.input-container span {
+  position: absolute; 
+  left: 82%;
+  @include text($color: $blue, $font-size: $body-lg)
+}
+
+ #input-feet, #input-inches, #input-stones, #input-pounds {
+    @include container($max-width: 220px, $padding: 20px 24px, $border-radius: 12px);
+   @include flex($align-items: flex-start, $justify-content: center);
+    border: 1px solid $dark-electric-blue;
+}
+
+.bmi-result h4, .bmi-result p {
+    color: $white;
+}
+
+
+#calculate-bmi {
+    order: 3;
+    @include container($max-width: 500px, $margin: 0 auto);
+    @include button($background-color: $blue, $padding: 1.1rem 2rem, $border-radius: 50px);
+    @include text($color: $white, $font-size: $body-lg, $font-weight: $fw-semi-bold, $line-height: $lh-xl);
+    border: none;
+    cursor: pointer;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bmi-result-display {
+    order: 2;
+    @include container($max-width: 500px, $padding: 2.5rem 1rem, $border-radius:  16px 999px 999px 16px, $margin: auto 0);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: space-between);
+    background-color: $blue;
+}
+
+.bmi-display {
+    @include container($max-width: 150px);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 0.5rem);
+}
+
+.bmi-result-container {
+    @include container($max-width: 350px);
+    @include flex($flex-direction: column, $align-items: flex-start);
+}
+
+.bmi-display h1, .bmi-display p, .bmi-result-container p {
+    color: $white;
+}
+
+
+@media (max-width: 1150px) {
+   .hero {
+    @include container($max-width: 868px, $margin: 0 auto, $border-radius: 0px 0px 35px 35px);
+    grid-template-rows: repeat(12, 1fr);
+    margin-bottom: 30rem;
+   }
+
+   .hero-content {
+    @include container($max-width: 868px, $padding: 2rem 0, $margin: 0 auto, $border-radius: 0px 0px 35px 35px);
+    @include flex($flex-direction: column, $align-items: center, $justify-content: flex-start);
+    height: 800px;
+    grid-row: 1 / span 12;
+    grid-column: 1 / span 12;
+   }
+
+   .hero-text {
+    @include container($max-width: 665px, $margin: 0 auto);
+    @include flex($flex-direction: column, $align-items: center, $justify-content: center, $gap: 2.2rem);
+    text-align: center;
+    margin-top: -5rem;
+   }
+
+   #bmi-form {
+    @include container($max-width: 764px, $padding: 2rem, $border-radius: 1rem, $margin: auto 0);
+    @include flex($flex-direction: column, $align-items: center, $justify-content: center, $gap: 2rem);
+    grid-column: 2 / span 10;
+    grid-row: 8 / span 6;
+   }
+    
+}
+
+@media (max-width: 550px) {
+
+    .hero-text h1 {
+        @include text($font-size: 3rem, $font-weight: $fw-semi-bold);
+    }
+
+    #bmi-form {
+        grid-row: 9 / span 8;
+    }
+
+    .bmi-result, .bmi-result-display {
+        @include container($max-width: 350px, $padding: 2rem, $border-radius:  16px, $margin: auto 0);
+        @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 1rem);
+    }
+
+    .input-field {
+        @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 1.5rem);
+    }
+
+    .input-group {
+        @include container($max-width: 350px);
+    }
+
+    #height, #weight {
+        @include container($max-width: 350px, $padding: 20px 24px, $border-radius: 12px);
+    }
+
+    .input-group span {
+        top: 57%;
+        left: 80%;
+    }
+
+    .bmi-result-display h1 {
+        @include text($color: $white, $font-size: 2.5rem, $font-weight: $fw-semi-bold);
+    }
+
+    .bmi-result-display p {
+        font-size: 0.875rem;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.5);
+        margin-right: 8px;
+    }
+
+    #bmi-form h3 {
+        @include text($font-size: 1.2rem, $font-weight: $fw-semi-bold);
+    }
+
+    .input-group-weight, .input-group-height {
+        @include container($max-width: 350px, $margin: 0 auto);
+    }
+
+    .input-container span {
+        left: 70%;
+    }
+}

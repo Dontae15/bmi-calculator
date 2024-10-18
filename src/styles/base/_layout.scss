@@ -1,0 +1,47 @@
+@use '../abstracts/helpers' as *;
+
+.main-content {
+    @include container($margin: 0 auto, $padding: 0 1rem);
+    @include grid($grid-template-columns: repeat(12, 1fr));
+    background-color: $white;
+}
+
+
+.hero {
+    @include container($max-width: 1276px);
+    @include grid($grid-template-columns: repeat(12, 1fr));
+    grid-column: span 12;
+    grid-row: 1 / 2;
+    height: 737px;
+}
+
+.results {
+    @include container($max-width: 1160px, $margin: 0 auto);
+    @include grid($grid-template-columns: repeat(12, 1fr));
+    grid-column: span 12;
+    grid-row: 2 / 3; 
+    padding-bottom: 10rem;
+}
+
+.tips {
+    @include container($max-width: 1392px, $margin: 0 auto, $padding: 3rem 2rem, $border-radius: 35px);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: center);
+    grid-column: span 12;
+    grid-row: 3 / 4;
+    background: var(--Gradient-1, linear-gradient(290deg, rgba(214, 230, 254, 0.25) 0%, rgba(214, 252, 254, 0.25) 100%));
+    margin-bottom: 7rem;
+}
+
+.limitations {
+    @include container($max-width: 1160px, $margin: 0 auto);
+    @include grid($grid-template-columns: repeat(12, 1fr));
+    grid-column: span 12;
+    grid-row: 4 / 5;
+    height: 704px;
+}
+
+
+.footer {
+    @include container($max-width: 1392px, $margin: 0 auto, $padding: 5rem 2rem, $border-radius: 35px);
+}
+

@@ -1,0 +1,25 @@
+{
+  "name": "bmi-calculator",
+  "version": "1.0.0",
+  "description": "![Design preview for the Body Mass Index Calculator coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.4.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0",
+    "sass": "^1.79.4",
+    "vite-plugin-full-reload": "^1.2.0"
+  }
+}

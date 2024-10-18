@@ -1,0 +1,58 @@
+@use '../abstracts/helpers' as *;
+
+.results-img {
+    grid-column: 1 / span 5;
+    margin-top: auto;
+}
+
+.results-content {
+    @include container($max-width: 465px);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 2.2rem);
+    grid-column : 8 / span 6;
+}
+
+.results-content img {
+    margin-left: auto;
+}
+
+@media (max-width: 1150px) {
+    .results-content img {
+        display: none;
+    }
+
+    .results-img {
+        margin: auto 0;
+    }
+
+    .results-content {
+        @include container($max-width: 465px);
+        @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 2.2rem);
+    }
+
+    .results-content h2 {
+        @include text($font-size: 2rem, $font-weight: $fw-semi-bold);
+    }
+}
+
+@media (max-width: 700px) {
+    .results-img {
+        @include flex($flex-direction: column, $align-items: center, $justify-content: center);
+        grid-column: 3 / span 8;
+        grid-row: 1 / 2;
+        margin-bottom: 5rem;
+    }
+
+    .results-content {
+        @include container($max-width: 565px);
+        @include flex($flex-direction: column, $align-items: center, $justify-content: center, $gap: 2.2rem);
+        grid-column: 2 / span 10;
+        grid-row: 2 / 3;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .results {
+        margin-top: 5rem;
+    }
+}
